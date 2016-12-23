@@ -1,0 +1,24 @@
+1. Array of 0, 1s of size 100, whereas 0 is closed and 1 is open
+2. One class that traverses all elements and switch
+3. Next every 2nd door
+4. Next every 3rd door
+5. Do so until to 100
+
+Simple
+
+
+1. Store the array in a simple class
+2. Inject the array
+3. Internal State
+4. Send it a function seems like the easiest
+5. Read the doors
+
+Create an class that has the doors
+Test with 0
+Test with 1
+Test with 5
+
+Two components:
+
+DoorContainer
+
