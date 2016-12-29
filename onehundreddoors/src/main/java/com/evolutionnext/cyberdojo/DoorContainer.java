@@ -1,10 +1,15 @@
 package com.evolutionnext.cyberdojo;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Predicate;
 
 public class DoorContainer {
+    private final Logger logger = LoggerFactory.getLogger(DoorContainer.class);
+
     private List<Boolean> doors = null;
 
     public DoorContainer(int initialSize) {
@@ -36,6 +41,7 @@ public class DoorContainer {
         for (int i = 0; i < doors.size(); i++) {
             if (predicate.test(i + 1)) {
                 doors.set(i, !doors.get(i));
+
             }
         }
     }
@@ -44,6 +50,7 @@ public class DoorContainer {
         for (int i = 0; i < doors.size(); i++) {
             final int x = i + 1;
             applyPredicateToAll(index -> index % x == 0);
+            logger.debug("Iteration " + i + ":" + doors.toString());
         }
     }
 }

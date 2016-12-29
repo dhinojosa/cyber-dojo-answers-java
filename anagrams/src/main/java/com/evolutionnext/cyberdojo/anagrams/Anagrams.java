@@ -1,11 +1,17 @@
 package com.evolutionnext.cyberdojo.anagrams;
 
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 public class Anagrams {
+
+    static Logger logger = LoggerFactory.getLogger(Anagrams.class);
 
     private Anagrams() {}
 
@@ -15,6 +21,9 @@ public class Anagrams {
         result[0] = array[1];
         result[1] = array[0];
         return new String(result);
+    }
+    public static <T> List<List<T>> shuffle(List<T> list) {
+        return Arrays.asList(list);
     }
 
     public static List<String> shuffle(String string) {
@@ -27,7 +36,9 @@ public class Anagrams {
                String extracted = string.substring(i, i+1);
                List<String> rest = shuffle(string.substring(0, i) + string.substring(i + 1, string.length()));
                for (String combo : rest) {
-                   result.add(extracted + combo);
+                   String word = extracted + combo;
+                   logger.debug(word);
+                   result.add(word);
                }
             }
             return result;
