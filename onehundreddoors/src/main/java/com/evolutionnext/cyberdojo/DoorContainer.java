@@ -41,7 +41,6 @@ public class DoorContainer {
         for (int i = 0; i < doors.size(); i++) {
             if (predicate.test(i + 1)) {
                 doors.set(i, !doors.get(i));
-
             }
         }
     }
