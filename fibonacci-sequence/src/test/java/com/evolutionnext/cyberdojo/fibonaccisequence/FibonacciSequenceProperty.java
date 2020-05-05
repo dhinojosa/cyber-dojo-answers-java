@@ -1,14 +1,13 @@
 package com.evolutionnext.cyberdojo.fibonaccisequence;
+
 import net.jqwik.api.ForAll;
 import net.jqwik.api.Label;
 import net.jqwik.api.Property;
 import net.jqwik.api.constraints.IntRange;
-import net.jqwik.api.constraints.StringLength;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import static org.assertj.core.api.Assertions.assertThat;
-
 
 @Label("Fibonacci Sequence Properties")
 public class FibonacciSequenceProperty {
